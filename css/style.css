@@ -27,8 +27,8 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
 }
 .container__sapp{
-    min-width: 1200px;
-    min-height: 800px;
+    width: 1200px;
+    height: 800px;
     background-color: #ffffff;
     margin: auto;
 }
