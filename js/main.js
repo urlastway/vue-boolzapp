@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
+        currentIndex: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -41,7 +42,7 @@ const app = new Vue({
                 name: 'Davide',
                 img: 'img/avatar_8.jpg',
                 time: '12:00',     
-            }
+            },
         ],
     },
 });
