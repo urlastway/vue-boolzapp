@@ -25,6 +25,7 @@ const app = new Vue({
                         time: '12:00', 
                         status: 'received',
                     },
+                    
                 
                 ],
 
@@ -207,5 +208,5 @@ const app = new Vue({
             },
         ],
     },
-    
+
 });

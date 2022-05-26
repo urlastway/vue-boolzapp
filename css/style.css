@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, p {
     background-image: url(../img/mine.jpg);
     display: flex;
     flex-wrap: wrap;
-    
+     
 }
 
 /*-----F.GENERAL-----*/
@@ -220,7 +220,6 @@ h1, h2, h3, h4, h5, h6, p {
 /*Chat*/
 .chat{
     width: 100%; 
-    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -233,6 +232,7 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    font-size: 14px;
 }
 .chat__contact{
     background-color: #ffffff;
@@ -247,9 +247,6 @@ h1, h2, h3, h4, h5, h6, p {
     color: #b6b9bb;
     align-self: flex-end;
 }
-.chat__messegge{
-    font-size: 14px;
-    margin-right: 20px;
-}
+
 /*F.Chat*/
 /*-------------------------------*/

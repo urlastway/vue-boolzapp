@@ -67,7 +67,7 @@
                                 <img :src="contacts[currentIndex].img" class="user__avatar">
                                 <div class="guest__information">
                                     <p class="user__name">{{contacts[currentIndex].name}}</p>
-                                    <p class="last__login">Ultimo Acesso oggi alle <span>{{contacts[currentIndex].time}}</span></p>
+                                    <p class="last__login">Ultimo Acesso oggi alle 12:00</p>
                                 </div>
                             </div>
                             <div class="icons__user">
@@ -77,18 +77,8 @@
                             </div>
                         </div>
                         <div class="chat">
-                            <div class="chat__contact">
-                                <p class="chat__messegge"></p>
-                                <p class="chat__time">22:00</p>
-                            </div>
-                            <div class="chat__user">
-                                <p class="chat__messegge"></p>
-                                <p class="chat__time">22:01</p>
-                            </div>
-                            <div class="chat__contact">
-                                <p class="chat__messegge"></p>
-                                <p class="chat__time">22:02</p>
-                            </div>
+                            <div class="chat__message" v-for="massage in contacts[currentIndex].massages" :class="massage.status === 'received' ? 'chat__contact' : 'chat__user' ">{{massage.massage}}<p class="chat__time">{{massage.time}}</p></div>
+                                
                         </div> 
                         <div class="push__massagge">
                             <i class="fa-regular fa-face-smile"></i>
