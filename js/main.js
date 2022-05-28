@@ -182,11 +182,14 @@ const app = new Vue({
             this.SendMex()
         },
         SendMex(){
+            setTimeout(() => {
             const SendMex = {
+                date: '03:52',
                 massage: 'ok',
                 status: 'received'
             };
             this.contacts[this.currentIndex].massages.push(SendMex);
+        }, 1000)
         }
     },
 
