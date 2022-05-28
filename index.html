@@ -82,7 +82,7 @@
                         </div> 
                         <form @submit.prevent="PushMassagge" class="push__massagge">
                             <i class="fa-regular fa-face-smile"></i>
-                            <input placeholder="Scrivi un messaggio" class="write__massagge" v-model="NewMex">
+                            <input placeholder="Scrivi un messaggio" class="write__massagge" v-model="NewMex" required pattern=".*\S+.*">
                             <i class="fa-solid fa-microphone"></i>
                         </form> 
                     </div>

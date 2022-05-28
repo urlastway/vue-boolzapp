@@ -178,7 +178,16 @@ const app = new Vue({
                 status: 'sent'
             };
             this.contacts[this.currentIndex].massages.push(NewMex);
+            this.NewMex = '';
+            this.SendMex()
         },
+        SendMex(){
+            const SendMex = {
+                massage: 'ok',
+                status: 'received'
+            };
+            this.contacts[this.currentIndex].massages.push(SendMex);
+        }
     },
 
 });
