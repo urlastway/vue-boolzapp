@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#root',
     data: {
         currentIndex: 0,
+        NewMex: '',
         contacts: [
                 {
                     name: 'Michele',
@@ -168,6 +169,16 @@ const app = new Vue({
                 ],   
             },
         ],
+    },
+    methods: {
+        PushMassagge(){
+            const NewMex = {
+                date: '10/01/2020 15:30:55',
+                massage: this.NewMex,
+                status: 'sent'
+            };
+            this.contacts[this.currentIndex].massages.push(NewMex);
+        },
     },
 
 });

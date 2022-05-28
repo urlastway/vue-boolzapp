@@ -80,11 +80,11 @@
                             <div class="chat__message" v-for="massage in contacts[currentIndex].massages" :class="massage.status === 'received' ? 'chat__contact' : 'chat__user' ">{{massage.massage}}<p class="chat__time">{{massage.time}}</p></div>
                                 
                         </div> 
-                        <div class="push__massagge">
+                        <form @submit.prevent="PushMassagge" class="push__massagge">
                             <i class="fa-regular fa-face-smile"></i>
-                            <input placeholder="Scrivi un messaggio" class="write__massagge">
+                            <input placeholder="Scrivi un messaggio" class="write__massagge" v-model="NewMex">
                             <i class="fa-solid fa-microphone"></i>
-                        </div> 
+                        </form> 
                     </div>
                 </div>
             </div>
