@@ -3,26 +3,27 @@ const app = new Vue({
     data: {
         currentIndex: 0,
         NewMex: '',
+        searchText: '',
         contacts: [
                 {
                     name: 'Michele',
                     img: 'img/avatar_1.jpg',
                     time: '12:00',
                     visible: true,
-                    massages: [
+                    messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            massage: 'Hai portato a spasso il cane?',
+                            message: 'Hai portato a spasso il cane?',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            massage: 'Ricordati di stendere i panni',
+                            message: 'Ricordati di stendere i panni',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            massage: 'Tutto fatto!',
+                            message: 'Tutto fatto!',
                             status: 'received'
                         }
                     ],
@@ -32,20 +33,20 @@ const app = new Vue({
                     img: 'img/avatar_2.jpg',
                     time: '12:00',
                     visible: true,
-                    massages: [
+                    messages: [
                         {
                             date: '20/03/2020 16:30:00',
-                            massage: 'Ciao come stai?',
+                            message: 'Ciao come stai?',
                             status: 'sent'
                         },
                         {
                             date: '20/03/2020 16:30:55',
-                            massage: 'Bene grazie! Stasera ci vediamo?',
+                            message: 'Bene grazie! Stasera ci vediamo?',
                             status: 'received'
                         },
                         {
                             date: '20/03/2020 16:35:00',
-                            massage: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                            message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                             status: 'sent'
                         }
                 ],  
@@ -54,20 +55,20 @@ const app = new Vue({
                     name: 'Samuele',
                     img: 'img/avatar_3.jpg',
                     time: '12:00',
-                    massages: [
+                    messages: [
                         {
                             date: '28/03/2020 10:10:40',
-                            massage: 'La Marianna va in campagna',
+                            message: 'La Marianna va in campagna',
                             status: 'received'
                         },
                         {
                             date: '28/03/2020 10:20:10',
-                            massage: 'Sicuro di non aver sbagliato chat?',
+                            message: 'Sicuro di non aver sbagliato chat?',
                             status: 'sent'
                         },
                         {
                             date: '28/03/2020 16:15:22',
-                            massage: 'Ah scusa!',
+                            message: 'Ah scusa!',
                             status: 'received'
                         }
                     ],   
@@ -76,15 +77,15 @@ const app = new Vue({
                 name: 'Alessandro B.',
                 img: 'img/avatar_4.jpg',
                 time: '12:00',
-                massages: [
+                messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        massage: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'Lo sai che ha aperto una nuova pizzeria?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        massage: 'Si, ma preferirei andare al cinema',
+                        message: 'Si, ma preferirei andare al cinema',
                         status: 'received'
                     },        
                 
@@ -94,15 +95,15 @@ const app = new Vue({
                 name: 'Alessandro L.',
                 img: 'img/avatar_5.jpg',
                 time: '12:00',
-                massages: [
+                messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        massage: 'Ricordati di chiamare la nonna',
+                        message: 'Ricordati di chiamare la nonna',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        massage: 'Va bene, stasera la sento',
+                        message: 'Va bene, stasera la sento',
                         status: 'received'
                     }                
                 ],   
@@ -111,20 +112,20 @@ const app = new Vue({
                 name: 'Claudia',
                 img: 'img/avatar_6.jpg',
                 time: '12:00',
-                massages: [
+                messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        massage: 'Ciao Claudia, hai novità?',
+                        message: 'Ciao Claudia, hai novità?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        massage: 'Non ancora',
+                        message: 'Non ancora',
                         status: 'received'
                     },
                     {
                         date: '10/01/2020 15:51:00',
-                        massage: 'Nessuna nuova, buona nuova',
+                        message: 'Nessuna nuova, buona nuova',
                         status: 'sent'
                     }                
                 ],
@@ -133,15 +134,15 @@ const app = new Vue({
                 name: 'Federico',
                 img: 'img/avatar_7.jpg',
                 time: '12:00',
-                massages: [
+                messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        massage: 'Fai gli auguri a Martina che è il suo compleanno!',
+                        message: 'Fai gli auguri a Martina che è il suo compleanno!',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        massage: 'Grazie per avermelo ricordato, le scrivo subito!',
+                        message: 'Grazie per avermelo ricordato, le scrivo subito!',
                         status: 'received'
                     }               
                 ],    
@@ -150,22 +151,22 @@ const app = new Vue({
                 name: 'Davide',
                 img: 'img/avatar_8.jpg',
                 time: '12:00',
-                massages: [
+                messages: [
                     {	
                         date: '10/01/2020 15:30:55',		
-                        massage: 'Finalmente è arrivata amica mia, la aspettavo da 3 mesi',
+                        message: 'Finalmente è arrivata amica mia, la aspettavo da 3 mesi',
                         status: 'received',
                     },
 
                     {
                         date: '10/01/2020 15:50:00',			
-                        massage: 'E chi è?',
+                        message: 'E chi è?',
                         status: 'send',
                     },
 
                     {	
                         date: '10/01/2020 15:51:00',		
-                        massage: 'La Paperella di Boolean', 
+                        message: 'La Paperella di Boolean', 
                         status: 'received',
                     },
                 
@@ -194,11 +195,15 @@ const app = new Vue({
             this.contacts[this.currentIndex].massages.push(SendMex);
         }, 1000)
         },
-        getMessageTime(contacts){
-            const mess = contacts.massages[contacts.massages.length - 1];
-            return mess;
+        getMessageTime(contact){
+            const mess = contact.messages[contact.messages.length - 1];
+            return mess.date;
         },
-
+        searchContacts(){
+            this.contact.forEach(element => {
+                element.visible = element.name.toLowerCase().includes(this.searchText.toLowerCase());
+            });
+        }
     },
 
 

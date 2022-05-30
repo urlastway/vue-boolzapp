@@ -45,7 +45,7 @@
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </div>
                                 <div class="input__search__table">
-                                    <input placeholder="Cerca o inizia una nuova chat" id="searchcontact">
+                                    <input placeholder="Cerca o inizia una nuova chat" @import="searchContacts()" v-model="searchText">
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="chat">
-                            <div class="chat__message" v-for="massage in contacts[currentIndex].massages" :class="massage.status === 'received' ? 'chat__contact' : 'chat__user' ">{{massage.massage}}<p class="chat__time">{{massage.date}}</p></div>                    
+                            <div class="chat__message" v-for="message in contacts[currentIndex].messages" :class="message.status === 'received' ? 'chat__contact' : 'chat__user' ">{{message.message}}<span class="chat__time">{{message.date}}</span></div>                    
                         </div> 
                         <form @submit.prevent="PushMassagge" class="push__massagge">
                             <i class="fa-regular fa-face-smile"></i>
