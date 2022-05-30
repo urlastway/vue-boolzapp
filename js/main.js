@@ -7,6 +7,7 @@ const app = new Vue({
                 {
                     name: 'Michele',
                     img: 'img/avatar_1.jpg',
+                    time: '12:00',
                     visible: true,
                     massages: [
                         {
@@ -29,6 +30,7 @@ const app = new Vue({
                 {
                     name:'Fabio',
                     img: 'img/avatar_2.jpg',
+                    time: '12:00',
                     visible: true,
                     massages: [
                         {
@@ -51,6 +53,7 @@ const app = new Vue({
                 {
                     name: 'Samuele',
                     img: 'img/avatar_3.jpg',
+                    time: '12:00',
                     massages: [
                         {
                             date: '28/03/2020 10:10:40',
@@ -148,21 +151,21 @@ const app = new Vue({
                 img: 'img/avatar_8.jpg',
                 time: '12:00',
                 massages: [
-                    {			
+                    {	
+                        date: '10/01/2020 15:30:55',		
                         massage: 'Finalmente è arrivata amica mia, la aspettavo da 3 mesi',
-                        time: '12:00', 
                         status: 'received',
                     },
 
-                    {			
+                    {
+                        date: '10/01/2020 15:50:00',			
                         massage: 'E chi è?',
-                        time: '12:00', 
                         status: 'send',
                     },
 
-                    {			
-                        massage: 'La Paperella di Boolean',
-                        time: '12:00', 
+                    {	
+                        date: '10/01/2020 15:51:00',		
+                        massage: 'La Paperella di Boolean', 
                         status: 'received',
                     },
                 
@@ -190,7 +193,13 @@ const app = new Vue({
             };
             this.contacts[this.currentIndex].massages.push(SendMex);
         }, 1000)
-        }
+        },
+        getMessageTime(contacts){
+            const mess = contacts.massages[contacts.massages.length - 1];
+            return mess;
+        },
+
     },
+
 
 });
