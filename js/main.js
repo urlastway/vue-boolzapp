@@ -178,10 +178,10 @@ const app = new Vue({
         PushMassagge(){
             const NewMex = {
                 date: '10/01/2020 15:30:55',
-                massage: this.NewMex,
+                message: this.NewMex,
                 status: 'sent'
             };
-            this.contacts[this.currentIndex].massages.push(NewMex);
+            this.contacts[this.currentIndex].messages.push(NewMex);
             this.NewMex = '';
             this.SendMex()
         },
@@ -189,10 +189,10 @@ const app = new Vue({
             setTimeout(() => {
             const SendMex = {
                 date: '03:52',
-                massage: 'ok',
+                message: 'ok',
                 status: 'received'
             };
-            this.contacts[this.currentIndex].massages.push(SendMex);
+            this.contacts[this.currentIndex].messages.push(SendMex);
         }, 1000)
         },
         getMessageTime(contact){
